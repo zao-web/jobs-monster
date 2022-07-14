@@ -18,6 +18,7 @@ class MonsterProvider extends AbstractProvider
             'name' => $payload['title'],
             'description' => $payload['description'],
             'url' => $payload['link'],
+            'sourceId' => $payload['guid'],
         ]);
 
         $job->setDatePostedAsString($payload['pubDate']);
@@ -42,6 +43,7 @@ class MonsterProvider extends AbstractProvider
             'link',
             'description',
             'pubDate',
+            'guid'
         ];
     }
 
